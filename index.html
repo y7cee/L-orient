@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2B0E0B">
+<meta property="og:title" content="L'Orient · Traiteur &amp; épicerie orientale à Ixelles">
+<meta property="og:description" content="Mezzés, sandwichs, assiettes et plateaux traiteur préparés chaque jour, rue Lesbroussart 18 à Ixelles.">
+<meta property="og:image" content="img/f-assiette.jpg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>L'Orient · Traiteur &amp; épicerie orientale à Ixelles</title>
+<meta name="description" content="L'Orient, traiteur et épicerie orientale rue Lesbroussart 18 à Ixelles. Houmous, taboulé, falafels, feuilles de vigne : servis au poids, en sandwich, en assiette ou en plateau traiteur.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Cpath%20d%3D%27M7%2062V28C7%2014%2018%206%2032%201c14%205%2025%2013%2025%2027v34z%27%20fill%3D%27%238E2A24%27/%3E%3Cpath%20d%3D%27M7%2062V28C7%2014%2018%206%2032%201c14%205%2025%2013%2025%2027v34z%27%20fill%3D%27none%27%20stroke%3D%27%23E5A23A%27%20stroke-width%3D%272.5%27/%3E%3Cpath%20d%3D%27M32%2020l4.2%2010.8L47%2035l-10.8%204.2L32%2050l-4.2-10.8L17%2035l10.8-4.2z%27%20fill%3D%27%23E5A23A%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Reem+Kufi:wght@400..700&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* L'Orient v2 : une vraie vitrine de traiteur.
+   Bacs inox, pique-étiquettes, arches mauresques, zellige et sumac. */
+:root{
+  --paper:#F5EEE3;
+  --paper-2:#EBE1D2;
+  --card:#FFFCF7;
+  --slip:#FFFBF2;
+  --ink:#24130F;
+  --ink-2:#3D2A24;
+  --muted:#75635B;
+  --sumac:#8E2A24;
+  --sumac-2:#A63A30;
+  --deep:#2B0E0B;
+  --deep-2:#43170F;
+  --deep-3:#5A2018;
+  --on-deep:#F7ECE2;
+  --on-deep-2:rgba(247,236,226,.74);
+  --safran:#E5A23A;
+  --safran-2:#F2BD62;
+  --menthe:#2F6B57;
+  --zellige:#1E5470;
+  --line:rgba(36,19,15,.12);
+  --line-2:rgba(36,19,15,.22);
+  --line-d:rgba(247,236,226,.16);
+  --f-kufi:"Reem Kufi","Trebuchet MS",sans-serif;
+  --f-serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --f-body:"Work Sans","Helvetica Neue",Arial,system-ui,sans-serif;
+  --header-h:76px;
+  --bar-h:34px;
+  --gutter:clamp(16px,4vw,44px);
+  --max:1240px;
+  --ease:cubic-bezier(.7,0,.2,1);
+  --ease-out:cubic-bezier(.2,.7,.2,1);
+  --zel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23000' stroke-width='1'%3E%3Cg id='s'%3E%3Crect x='19.5' y='19.5' width='17' height='17'/%3E%3Crect x='19.5' y='19.5' width='17' height='17' transform='rotate(45 28 28)'/%3E%3Ccircle cx='28' cy='28' r='3.6'/%3E%3C/g%3E%3Cuse href='%23s' x='-28' y='-28'/%3E%3Cuse href='%23s' x='28' y='-28'/%3E%3Cuse href='%23s' x='-28' y='28'/%3E%3Cuse href='%23s' x='28' y='28'/%3E%3Cpath d='M28 4v6M28 46v6M4 28h6M46 28h6'/%3E%3C/g%3E%3C/svg%3E");
+  --frise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='16' viewBox='0 0 36 16'%3E%3Cpath d='M18 1.5 L24.5 8 L18 14.5 L11.5 8Z' fill='%23E5A23A'/%3E%3Cpath d='M18 5 L21 8 L18 11 L15 8Z' fill='%232B0E0B'/%3E%3Ccircle cx='0' cy='8' r='2.3' fill='%232F6B57'/%3E%3Ccircle cx='36' cy='8' r='2.3' fill='%232F6B57'/%3E%3C/svg%3E");
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--paper);scroll-padding-top:calc(var(--header-h) + 14px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.locked{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--safran);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;font-family:var(--f-kufi);font-weight:600;line-height:1.02;letter-spacing:-.005em;text-wrap:balance}
+h1 em,h2 em,h3 em{font-family:var(--f-serif);font-weight:400;font-style:italic;letter-spacing:0}
+p{margin:0}
+[lang="ar"]{font-family:var(--f-kufi);font-style:normal}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(72px,9vw,128px)}
+.pattern{position:absolute;inset:0;pointer-events:none;background:currentColor;-webkit-mask:var(--zel) 0 0/56px 56px repeat;mask:var(--zel) 0 0/56px 56px repeat}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.eyebrow svg{width:14px;height:14px;color:var(--safran);flex:none}
+.on-deep .eyebrow,.eyebrow.light{color:var(--safran-2)}
+.lead{font-size:clamp(1.02rem,1.3vw,1.14rem);color:var(--muted);max-width:52ch}
+.on-deep .lead{color:var(--on-deep-2)}
+.h2{font-size:clamp(2.3rem,4.8vw,3.9rem)}
+.h2 em{color:var(--sumac)}
+.on-deep .h2 em{color:var(--safran)}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;padding-bottom:3px;border-bottom:2px solid var(--safran);transition:border-color .25s,gap .25s}
+.link svg{width:16px;height:16px}
+.link:hover{border-color:currentColor;gap:12px}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:12px;border:1.5px solid transparent;font-weight:600;font-size:.98rem;line-height:1;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .2s,box-shadow .25s}
+.btn svg{width:17px;height:17px;flex:none}
+.btn:active{transform:scale(.97)}
+.btn-safran{background:var(--safran);color:var(--deep);box-shadow:0 10px 24px -12px rgba(229,162,58,.8)}
+.btn-safran:hover{background:var(--safran-2)}
+.btn-deep{background:var(--deep);color:var(--on-deep)}
+.btn-deep:hover{background:var(--sumac)}
+.btn-line{border-color:var(--line-2);background:transparent}
+.btn-line:hover{border-color:var(--ink)}
+.btn-ghost{border-color:rgba(247,236,226,.32);color:var(--on-deep);background:transparent}
+.btn-ghost:hover{border-color:var(--on-deep);background:rgba(247,236,226,.06)}
+.btn-sm{padding:11px 16px;font-size:.9rem;border-radius:10px}
+.star8{display:inline-block;width:1em;height:1em;flex:none}
+
+/* ---------- Bandeau + en-tête ---------- */
+.annonce{position:relative;background:var(--deep);color:rgba(247,236,226,.86);font-size:.84rem;height:var(--bar-h);display:flex;align-items:center}
+.annonce .wrap{display:flex;justify-content:center;align-items:center;gap:18px;width:100%;white-space:nowrap;overflow:hidden}
+.annonce b{color:var(--safran);font-weight:600}
+.annonce a{text-decoration:none}
+.annonce a:hover{color:#fff}
+.annonce .sep{width:5px;height:5px;background:var(--safran);transform:rotate(45deg);opacity:.7}
+@media (max-width:760px){.annonce .addr,.annonce .sep{display:none}}
+@media (max-width:480px){.annonce .long{display:none}}
+.hd{position:sticky;top:0;z-index:50;background:rgba(245,238,227,.9);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.hd.scrolled{border-bottom-color:var(--line);box-shadow:0 10px 30px -24px rgba(36,19,15,.5)}
+.hd-in{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.badge{flex:none;position:relative;width:46px;height:52px;display:grid;place-items:center;color:var(--safran)}
+.badge::before{content:"";position:absolute;inset:0;background:var(--deep);clip-path:url(#arch-clip);-webkit-clip-path:url(#arch-clip)}
+.badge svg{position:relative;width:22px;height:22px;margin-top:8px}
+.logo-t{display:grid;line-height:1}
+.logo-t b{font-family:var(--f-kufi);font-weight:700;font-size:1.6rem;letter-spacing:.01em}
+.logo-t em{font-family:var(--f-serif);font-size:1rem;color:var(--muted);margin-top:2px}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{position:relative;text-decoration:none;font-weight:500;font-size:.95rem;padding:10px 13px}
+.nav a::after{content:"";position:absolute;left:50%;bottom:3px;width:6px;height:6px;background:var(--safran);transform:translateX(-50%) rotate(45deg) scale(0);transition:transform .3s var(--ease-out)}
+.nav a:hover::after,.nav a.on::after,.nav a[aria-current]::after{transform:translateX(-50%) rotate(45deg) scale(1)}
+.hd-act{display:flex;align-items:center;gap:10px}
+.round{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:0;background:var(--deep);color:var(--on-deep);text-decoration:none;cursor:pointer;transition:background .25s}
+.round:hover{background:var(--sumac)}
+.round svg{width:19px;height:19px}
+.burger{display:none;background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line-2)}
+.burger:hover{background:var(--paper-2)}
+.burger span{position:relative;width:18px;height:1.5px;background:currentColor;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:currentColor}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.hd-call{display:none}
+@media (max-width:1060px){.nav a{padding:10px 9px;font-size:.92rem}}
+@media (max-width:980px){:root{--header-h:66px}.nav,.hd-act .btn{display:none}.burger,.hd-call{display:grid}}
+@media (max-width:400px){.logo-t em{display:none}}
+
+/* Menu mobile plein écran */
+.mm{position:fixed;inset:0;z-index:120;background:var(--deep);color:var(--on-deep);display:flex;flex-direction:column;align-items:center;text-align:center;padding:env(safe-area-inset-top,0px) var(--gutter) calc(24px + env(safe-area-inset-bottom,0px));opacity:0;visibility:hidden;transition:opacity .45s ease,visibility 0s linear .45s;overflow:hidden auto}
+.mm.open{opacity:1;visibility:visible;transition:opacity .45s ease,visibility 0s}
+.mm .pattern{color:var(--safran);opacity:.06}
+.mm-ros{position:absolute;left:50%;top:50%;width:min(140vw,760px);aspect-ratio:1;translate:-50% -50%;color:var(--safran);opacity:.1;pointer-events:none;animation:spin 140s linear infinite}
+.mm-top{position:relative;flex:none;width:100%;height:var(--header-h);display:flex;align-items:center;justify-content:space-between;text-align:left}
+.mm .logo-t em{color:rgba(247,236,226,.6)}
+.mm .badge::before{background:var(--sumac)}
+.mm-close{background:transparent;color:var(--on-deep);box-shadow:inset 0 0 0 1.5px var(--line-d)}
+.mm-close:hover{background:rgba(247,236,226,.08)}
+.mm nav{position:relative;flex:1 0 auto;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding-block:20px 56px}
+.mm nav a{display:block;font-family:var(--f-kufi);font-weight:600;font-size:clamp(2.1rem,9.5vw,2.9rem);line-height:1.2;text-decoration:none;padding:4px 10px;opacity:0;transform:translateY(14px);transition:opacity .5s,transform .7s var(--ease-out),color .25s}
+.mm nav a em{font-family:var(--f-serif);font-weight:400;color:var(--safran)}
+.mm.open nav a{opacity:1;transform:none}
+.mm.open nav a:nth-child(2){transition-delay:.05s}.mm.open nav a:nth-child(3){transition-delay:.1s}.mm.open nav a:nth-child(4){transition-delay:.15s}.mm.open nav a:nth-child(5){transition-delay:.2s}
+.mm nav a:hover,.mm nav a[aria-current]{color:var(--safran)}
+.mm-orn{width:9px;height:9px;background:var(--safran);transform:rotate(45deg);margin:10px auto;opacity:.8}
+
+/* ---------- Hero : la vitrine ---------- */
+.hero{position:relative;overflow:hidden;color:var(--on-deep);background:radial-gradient(70% 80% at 88% 18%,#5E2219 0%,transparent 60%),radial-gradient(60% 70% at 0% 100%,#3F150F 0%,transparent 70%),var(--deep);padding:clamp(52px,7vw,96px) 0 clamp(60px,7vw,104px)}
+.hero>.pattern{color:var(--safran);opacity:.055}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,4.2vw,60px);align-items:center}
+.hero .btn{padding:15px 21px}
+.hero h1{font-size:clamp(2.8rem,5.4vw,4.9rem);margin:22px 0 22px}
+.hero h1 em{color:var(--safran);display:inline-block}
+.hero .lead{color:var(--on-deep-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trust{list-style:none;margin:34px 0 0;padding:22px 0 0;border-top:1px solid var(--line-d);display:flex;flex-wrap:wrap;gap:12px 26px;font-size:.88rem;color:var(--on-deep-2)}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust svg{width:17px;height:17px;color:var(--safran)}
+.trust .stars{color:var(--safran);letter-spacing:2px;font-size:.84rem}
+.trust b{color:var(--on-deep);font-weight:600}
+
+.vit{position:relative}
+.vit-ros{position:absolute;left:50%;top:48%;width:128%;aspect-ratio:1;translate:-50% -50%;color:var(--safran);opacity:.12;pointer-events:none;animation:spin 180s linear infinite}
+.vit-case{position:relative;border-radius:22px;padding:22px 18px 0;background:linear-gradient(180deg,rgba(255,250,235,.16),rgba(255,255,255,0) 26%),repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,rgba(0,0,0,.035) 1px 2px,transparent 2px 4px),linear-gradient(180deg,#71797d,#4a5155 58%,#3c4246);box-shadow:0 50px 90px -34px rgba(0,0,0,.8),0 0 0 1px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.4),inset 0 0 0 1px rgba(255,255,255,.07)}
+.vit-led{position:absolute;left:24px;right:24px;top:9px;height:3px;border-radius:3px;background:#FFF6DE;box-shadow:0 0 10px 1px rgba(255,236,190,.7),0 0 36px 8px rgba(255,236,190,.16)}
+.trays{list-style:none;margin:0;padding:12px 0 36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:38px 14px}
+.tray{position:relative}
+.tray-b{display:block;width:100%;aspect-ratio:4/3.25;padding:6px;border:0;border-radius:9px;cursor:pointer;background:linear-gradient(152deg,#F6F8F9 0%,#C2C8CB 28%,#EEF1F2 50%,#A3ABAF 100%);box-shadow:0 12px 18px -10px rgba(0,0,0,.75),0 2px 3px rgba(0,0,0,.35),inset 0 1px 0 #fff,inset 0 -1px 0 rgba(0,0,0,.2);transition:transform .45s var(--ease-out),box-shadow .45s}
+.tray-in{position:relative;display:block;width:100%;height:100%;border-radius:5px;overflow:hidden;background:#7d8589}
+.tray-in img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1s var(--ease-out),filter .4s}
+.tray-in::after{content:"";position:absolute;inset:0;border-radius:5px;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.4),inset 0 8px 12px -5px rgba(0,0,0,.6),inset 0 -2px 6px rgba(0,0,0,.25);background:linear-gradient(180deg,rgba(255,246,222,.2),transparent 45%)}
+.tray-b:hover{transform:translateY(-4px);box-shadow:0 20px 26px -12px rgba(0,0,0,.8),0 2px 3px rgba(0,0,0,.3),inset 0 1px 0 #fff}
+.tray-b:hover img{transform:scale(1.12)}
+.pick{position:absolute;left:10px;bottom:-24px;z-index:2;display:grid;gap:3px;padding:6px 10px 6px;border-radius:3px;background:var(--slip);color:var(--ink);box-shadow:0 6px 12px -4px rgba(0,0,0,.55);transform:rotate(-2.5deg);transform-origin:left bottom;pointer-events:none;white-space:nowrap;line-height:1;transition:transform .45s var(--ease-out)}
+.pick::before{content:"";position:absolute;left:18px;bottom:100%;width:2px;height:24px;border-radius:1px;background:linear-gradient(#E3C796,#B08550)}
+.pick b{font-size:.72rem;font-weight:600;letter-spacing:.01em}
+.pick i{font-size:.8rem;color:var(--sumac);line-height:1.1}
+.tray:nth-child(even) .pick{transform:rotate(2deg)}
+.tray-b:hover~.pick{transform:translateY(-4px) rotate(-1deg)}
+.tray-add{position:absolute;top:12px;right:12px;z-index:2;width:32px;height:32px;border-radius:50%;border:0;display:grid;place-items:center;cursor:pointer;background:rgba(255,251,242,.94);color:var(--deep);box-shadow:0 6px 14px -5px rgba(0,0,0,.6);transition:transform .3s var(--ease-out),background .25s}
+.tray-add svg{width:15px;height:15px}
+.tray-add:hover{transform:scale(1.1)}
+.tray-add .i-check,.chip .i-check{display:none}
+.tray-add[aria-pressed="true"]{background:var(--safran)}
+.tray-add[aria-pressed="true"] .i-plus{display:none}
+.tray-add[aria-pressed="true"] .i-check{display:block}
+.vit-front{position:relative;margin:0 -18px;padding:13px 22px;border-radius:0 0 22px 22px;background:linear-gradient(180deg,#2F3437,#1C2022);display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.66rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.vit-front .dots{display:flex;gap:6px}
+.vit-front .dots i{width:6px;height:6px;border-radius:50%;background:#59d18c;box-shadow:0 0 8px #59d18c}
+.vit-front .dots i+i{background:rgba(255,255,255,.18);box-shadow:none}
+.vit-sweep{position:absolute;inset:0;overflow:hidden;border-radius:22px;pointer-events:none;z-index:3}
+.vit-sweep::before{content:"";position:absolute;top:-10%;bottom:-10%;left:0;width:20%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);transform:translateX(-160%) skewX(-16deg);animation:sweep 9s var(--ease) 1.2s infinite}
+@keyframes sweep{0%{transform:translateX(-160%) skewX(-16deg)}32%,100%{transform:translateX(620%) skewX(-16deg)}}
+.vit-hint{position:relative;margin-top:22px;text-align:center;font-size:.86rem;color:var(--on-deep-2)}
+.vit-hint b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--slip);color:var(--deep);font-size:.85rem;line-height:1;vertical-align:-3px}
+@keyframes spin{to{rotate:360deg}}
+
+/* Bande défilante */
+.marq{position:relative;overflow:hidden;background:var(--safran);color:var(--deep);padding:15px 0;border-block:1px solid rgba(43,14,11,.18)}
+.marq-track{display:flex;width:max-content;animation:marq 48s linear infinite}
+.marq-track span{display:flex;align-items:center;gap:16px;padding-right:16px;white-space:nowrap;font-family:var(--f-kufi);font-weight:600;font-size:1.25rem;line-height:1}
+.marq-track span i{font-size:1.3rem;opacity:.75}
+.marq-track svg{width:14px;height:14px;color:var(--sumac)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- Mon assiette ---------- */
+.as-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,6vw,90px);align-items:center}
+.as-copy .h2{margin:16px 0 18px}
+.as-box{margin-top:30px;border-top:1px solid var(--line)}
+.as-head{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.as-head b{font-family:var(--f-kufi);font-size:1rem;letter-spacing:0;color:var(--ink)}
+.as-list{list-style:none;margin:0;padding:0}
+.as-list li{display:flex;align-items:center;gap:14px;padding:10px 0;border-top:1px solid var(--line);animation:rowIn .5s var(--ease-out) both}
+@keyframes rowIn{from{opacity:0;transform:translateX(-10px)}}
+.as-list img{width:50px;height:50px;border-radius:12px;object-fit:cover;flex:none;box-shadow:0 4px 10px -6px rgba(36,19,15,.5)}
+.as-list .nm{flex:1;display:flex;align-items:baseline;gap:10px;min-width:0}
+.as-list .nm b{font-weight:600}
+.as-list .nm i{color:var(--sumac);font-size:.95rem}
+.as-list button{width:36px;height:36px;border-radius:50%;border:0;background:transparent;color:var(--muted);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s}
+.as-list button:hover{background:var(--paper-2);color:var(--ink)}
+.as-list button svg{width:16px;height:16px}
+.as-empty{padding:16px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+.as-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.as-note{margin-top:14px;font-size:.84rem;color:var(--muted)}
+.as-stage{position:relative;border-radius:30px;padding:clamp(26px,4vw,52px) clamp(18px,3vw,40px) clamp(24px,3vw,36px);background:radial-gradient(75% 60% at 50% 42%,#F6EEE1,#E4D6C1);overflow:hidden;box-shadow:inset 0 0 0 1px rgba(36,19,15,.06)}
+.as-stage>.pattern{color:var(--sumac);opacity:.07}
+.plate{position:relative;width:min(100%,440px);margin-inline:auto;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#FDFBF7 0 60%,#F1ECE3 63.5%,#FFFDF9 68%,#EEE8DE 92%,#E0D7CA 100%);box-shadow:0 36px 60px -26px rgba(70,35,20,.6),0 12px 20px -12px rgba(70,35,20,.35),inset 0 -8px 18px rgba(80,50,30,.08),inset 0 3px 6px rgba(255,255,255,.9);transition:transform .35s var(--ease-out)}
+.plate.bump{animation:bump .45s var(--ease-out)}
+@keyframes bump{40%{transform:scale(1.03)}}
+.plate-rim{position:absolute;inset:0;width:100%;height:100%;color:var(--zellige);pointer-events:none}
+.plate-food{position:absolute;inset:18%;border-radius:48% 52% 50% 50%/51% 48% 52% 49%;overflow:hidden}
+.plate-food::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 18px 4px rgba(253,251,247,.5),inset 0 -6px 14px rgba(60,30,10,.18)}
+.sec{position:absolute;inset:0;transition:clip-path .85s var(--ease)}
+.sec img{width:100%;height:100%;object-fit:cover}
+.plate-empty{position:absolute;inset:18%;display:grid;place-items:center;text-align:center;font-family:var(--f-kufi);font-size:1.1rem;line-height:1.3;color:rgba(36,19,15,.32);transition:opacity .4s}
+.plate-empty i{display:block;font-size:1.6rem;margin-top:6px}
+.plate:not(.empty) .plate-empty{opacity:0}
+.chips{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:30px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:5px 13px 5px 5px;border-radius:999px;border:1.5px solid rgba(36,19,15,.14);background:var(--card);cursor:pointer;font-weight:500;font-size:.86rem;line-height:1;transition:background .25s,color .25s,border-color .25s,opacity .25s,transform .2s}
+.chip img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+.chip:hover{border-color:var(--ink)}
+.chip:active{transform:scale(.96)}
+.chip[aria-pressed="true"]{background:var(--deep);border-color:var(--deep);color:var(--on-deep)}
+.chip.full:not([aria-pressed="true"]){opacity:.45}
+.as-live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.shake{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+
+/* ---------- Trois façons ---------- */
+.fm{padding-top:0}
+.fm-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:clamp(30px,4vw,48px)}
+.fm-head .h2{margin-top:14px}
+.fm-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,28px)}
+.fcard{position:relative;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border-radius:24px;padding:14px 14px 26px;box-shadow:0 1px 0 var(--line),0 24px 44px -34px rgba(60,30,20,.55);transition:transform .5s var(--ease-out),box-shadow .5s}
+.fcard:hover{transform:translateY(-6px);box-shadow:0 1px 0 var(--line),0 34px 54px -34px rgba(60,30,20,.6)}
+.arch{position:relative;overflow:hidden;clip-path:url(#arch-clip);-webkit-clip-path:url(#arch-clip);background:var(--paper-2)}
+.arch img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out)}
+.fcard .arch{aspect-ratio:4/4.3}
+.fcard:hover .arch img{transform:scale(1.07)}
+.fcard .num{position:absolute;top:26px;left:50%;translate:-50% 0;z-index:2;width:38px;height:38px;display:grid;place-items:center;font-family:var(--f-kufi);font-weight:600;color:var(--deep);background:var(--slip);border-radius:50%;box-shadow:0 6px 14px -6px rgba(0,0,0,.5)}
+.fcard-b{padding:22px 12px 0;text-align:center;display:flex;flex-direction:column;align-items:center;flex:1}
+.fcard .k{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sumac)}
+.fcard h3{font-size:clamp(1.7rem,2.4vw,2.1rem);margin:10px 0 10px}
+.fcard p{color:var(--muted);font-size:.97rem;max-width:30ch}
+.fcard .go{margin-top:auto;padding-top:20px}
+
+/* ---------- Traiteur ---------- */
+.tr{position:relative;overflow:hidden;background:var(--deep);color:var(--on-deep)}
+.tr>.pattern{color:var(--safran);opacity:.05}
+.frise{height:16px;background:var(--frise) 0 0/36px 16px repeat-x,var(--deep)}
+.tr-grid{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:start}
+.tr-photo{position:sticky;top:calc(var(--header-h) + 40px);padding:22px}
+.tr-photo .arch{aspect-ratio:4/5;background:var(--deep-2)}
+.arch-line{position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);overflow:visible;pointer-events:none;color:var(--safran)}
+.arch-line path{fill:none;stroke:currentColor;stroke-width:1.3;vector-effect:non-scaling-stroke}
+.arch-line .keystone{fill:currentColor;stroke:none}
+.tr-photo .cap{position:absolute;left:50%;bottom:4px;translate:-50% 0;white-space:nowrap;display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--slip);color:var(--deep);font-size:.84rem;font-weight:600;box-shadow:0 14px 28px -12px rgba(0,0,0,.6)}
+.tr-photo .cap svg{width:16px;height:16px;color:var(--sumac)}
+.tr-copy .h2{margin:16px 0 18px}
+.steps{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.steps li{position:relative;padding:18px 16px;border-radius:16px;background:rgba(247,236,226,.05);box-shadow:inset 0 0 0 1px var(--line-d)}
+.steps b{display:grid;place-items:center;width:34px;height:34px;margin-bottom:12px;font-family:var(--f-kufi);font-size:1.05rem;color:var(--deep);background:var(--safran);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.steps strong{display:block;font-weight:600;font-size:1rem}
+.steps em{display:block;font-style:normal;font-size:.88rem;color:var(--on-deep-2);margin-top:2px}
+/* Bon de commande (Web3Forms) */
+.slip{position:relative;margin-top:36px;padding:34px clamp(20px,3vw,34px) 30px;background:var(--slip);color:var(--ink);border-radius:4px 4px 14px 14px;box-shadow:0 40px 70px -40px rgba(0,0,0,.9);transform:rotate(-.6deg)}
+.slip::before{content:"";position:absolute;left:0;right:0;top:-8px;height:9px;background:radial-gradient(circle at 7px 0,transparent 6px,var(--slip) 6.5px) -7px 0/14px 9px repeat-x}
+.slip-h{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:16px;border-bottom:1.5px dashed rgba(36,19,15,.25)}
+.slip-h h3{font-size:1.75rem}
+.slip-h h3 em{color:var(--sumac)}
+.slip-h p{font-size:.88rem;color:var(--muted);margin-top:6px}
+.slip-stamp{flex:none;width:70px;height:70px;border-radius:50%;display:grid;place-items:center;text-align:center;border:1.5px solid var(--sumac);color:var(--sumac);font-size:.56rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;transform:rotate(-10deg);opacity:.85}
+.slip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 22px;margin-top:10px}
+.fld{display:grid;gap:2px;padding-top:14px}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.fld input,.fld select,.fld textarea{width:100%;border:0;border-bottom:1.5px dotted rgba(36,19,15,.38);background:transparent;padding:8px 0 7px;font-family:var(--f-serif);font-size:1.3rem;line-height:1.2;color:var(--ink);border-radius:0;outline:0;transition:border-color .2s}
+.fld textarea{resize:vertical;min-height:70px;font-size:1.2rem}
+.fld select{appearance:none;-webkit-appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238E2A24' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 2px center/16px no-repeat;padding-right:24px;cursor:pointer}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-bottom:1.5px solid var(--sumac)}
+.fld input::placeholder,.fld textarea::placeholder{color:rgba(36,19,15,.32)}
+.slip-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:24px}
+.slip-foot small{font-size:.84rem;color:var(--muted)}
+.slip-foot small a{color:var(--sumac);font-weight:600}
+.form-msg{margin-top:14px;font-size:.92rem;font-weight:500;min-height:1.4em}
+.form-msg.ok{color:var(--menthe)}
+.form-msg.err{color:var(--sumac)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* ---------- Épicerie ---------- */
+.ep-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,6vw,90px);align-items:center}
+.ep-copy .h2{margin:16px 0 18px}
+.rayons{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px}
+.rayons li{display:flex;align-items:center;gap:12px;padding:13px 0;border-top:1px solid var(--line);font-weight:500}
+.rayons i{width:10px;height:10px;flex:none;background:var(--c);transform:rotate(45deg)}
+.ep-photo{position:relative;padding:14px;border-radius:30px;background:var(--deep);box-shadow:0 40px 70px -40px rgba(43,14,11,.7)}
+.ep-photo>.pattern{color:var(--safran);opacity:.18;border-radius:30px}
+.ep-photo .frame{position:relative;border-radius:20px 20px 20px 20px;overflow:hidden;aspect-ratio:16/11}
+.ep-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease-out)}
+.ep-photo:hover img{transform:scale(1.05)}
+.ep-photo .cap{position:absolute;left:28px;bottom:28px;display:flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;background:var(--slip);color:var(--deep);font-size:.84rem;font-weight:600;box-shadow:0 12px 24px -12px rgba(0,0,0,.6)}
+.ep-photo .cap i{width:8px;height:8px;background:var(--safran);transform:rotate(45deg)}
+
+/* ---------- Infos ---------- */
+.inf{background:var(--paper-2)}
+.inf-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,90px);align-items:center}
+.inf-copy .h2{margin:16px 0 18px}
+.card-info{position:relative;background:var(--card);border-radius:26px;padding:clamp(26px,3.4vw,40px);box-shadow:0 30px 60px -40px rgba(60,30,20,.6)}
+.card-info .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.card-info .k{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sumac)}
+.card-info .addr{font-family:var(--f-kufi);font-weight:600;font-size:clamp(1.6rem,2.6vw,2rem);line-height:1.15;margin-top:12px}
+.card-info .rate{flex:none;text-align:center;padding:10px 14px;border-radius:14px;background:var(--paper)}
+.card-info .rate b{display:block;font-family:var(--f-kufi);font-size:1.6rem;line-height:1}
+.card-info .rate span{font-size:.72rem;color:var(--muted)}
+.card-info .rate .st{color:var(--safran);font-size:.7rem;letter-spacing:1px}
+.rows{list-style:none;margin:24px 0 22px;padding:0}
+.rows li{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-top:1px solid var(--line);font-size:.96rem}
+.rows li span:first-child{color:var(--muted)}
+.rows li span:last-child{font-weight:600;text-align:right}
+.rows a{text-decoration:none}
+.rows a:hover{color:var(--sumac)}
+
+/* ---------- Pied de page ---------- */
+.ft{position:relative;overflow:hidden;background:var(--deep);color:var(--on-deep);text-align:center}
+.ft>.pattern{color:var(--safran);opacity:.045}
+.ft-in{position:relative;display:flex;flex-direction:column;align-items:center;padding-block:clamp(64px,8vw,96px) 28px}
+.ft .badge{width:56px;height:64px}
+.ft .badge::before{background:var(--sumac)}
+.ft .badge svg{width:26px;height:26px;margin-top:10px}
+.ft-brand{margin-top:16px;display:grid;line-height:1}
+.ft-brand b{font-family:var(--f-kufi);font-weight:700;font-size:2.4rem}
+.ft-brand em{font-family:var(--f-serif);font-size:1.15rem;color:var(--safran);margin-top:6px}
+.ft-tag{max-width:46ch;margin:20px auto 0;color:var(--on-deep-2);font-size:.98rem}
+.ft-nav{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 8px}
+.ft-nav a{display:block;padding:8px 12px;text-decoration:none;font-weight:500;color:var(--on-deep)}
+.ft-nav a:hover{color:var(--safran)}
+.ft-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;width:100%;max-width:820px;margin-top:40px;padding-top:36px;border-top:1px solid var(--line-d)}
+.ft-cols h4{margin:0 0 8px;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--safran-2)}
+.ft-cols p{color:var(--on-deep-2);font-size:.94rem}
+.ft-cols a{text-decoration:none}
+.ft-cols a:hover{color:var(--safran)}
+.ft-icons{display:flex;justify-content:center;gap:10px;margin-top:34px}
+.ft-icons a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 0 1.5px var(--line-d);color:var(--on-deep);transition:background .25s,color .25s}
+.ft-icons a:hover{background:var(--safran);color:var(--deep)}
+.ft-icons svg{width:19px;height:19px}
+.ft-small{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 24px;width:100%;margin-top:40px;padding-top:22px;border-top:1px solid var(--line-d);font-size:.84rem;color:rgba(247,236,226,.55)}
+.ft-top{border:0;background:transparent;color:var(--on-deep);font-weight:600;cursor:pointer;padding:8px 4px}
+.ft-top:hover{color:var(--safran)}
+
+/* Retour en haut + mini assiette */
+.to-top{position:fixed;right:18px;bottom:18px;z-index:60;width:50px;height:50px;border-radius:50%;border:0;display:grid;place-items:center;background:var(--deep);color:var(--on-deep);box-shadow:0 14px 30px -12px rgba(0,0,0,.6);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .35s,transform .35s var(--ease-out),visibility 0s linear .35s,background .25s}
+.to-top.show{opacity:1;visibility:visible;transform:none;transition:opacity .35s,transform .35s var(--ease-out),visibility 0s,background .25s}
+.to-top:hover{background:var(--sumac)}
+.to-top svg{width:20px;height:20px}
+.mini{position:fixed;left:18px;bottom:18px;z-index:110;display:flex;align-items:center;gap:10px;padding:6px 16px 6px 6px;border-radius:999px;border:0;background:var(--deep);color:var(--on-deep);box-shadow:0 16px 34px -12px rgba(0,0,0,.6),inset 0 0 0 1px rgba(247,236,226,.12);cursor:pointer;font-weight:600;font-size:.9rem;transform:translateY(160%);transition:transform .55s var(--ease-out)}
+.mini.show{transform:none}
+.mini-plate{position:relative;width:40px;height:40px;border-radius:50%;background:radial-gradient(circle,#FDFBF7 0 62%,#E9E2D7 100%);flex:none}
+.mini-plate .plate-food{inset:14%}
+.mini-plate .sec{transition-duration:.6s}
+.mini-n{display:grid;place-items:center;min-width:24px;height:24px;padding:0 6px;border-radius:999px;background:var(--safran);color:var(--deep);font-size:.8rem}
+.mini.bump .mini-plate{animation:bump .45s var(--ease-out)}
+.fly{position:fixed;left:0;top:0;z-index:130;width:72px;height:72px;border-radius:50%;background-size:cover;background-position:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.55),0 0 0 3px #FFFBF2;pointer-events:none;will-change:transform}
+
+/* ---------- Immersion : sous l'arche ---------- */
+.imm{position:fixed;inset:0;z-index:100;color:var(--on-deep);overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
+.imm-bg{position:fixed;inset:0;background:radial-gradient(80% 80% at 30% 45%,#621F17 0%,#2B0E0B 72%);opacity:0;transition:opacity .5s}
+.imm-bg .pattern{color:var(--safran);opacity:.06}
+.imm.open .imm-bg{opacity:1}
+.imm-top{position:sticky;top:0;z-index:4;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px var(--gutter);opacity:0;transition:opacity .4s .2s}
+.imm.open .imm-top{opacity:1}
+.pill{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 18px;border-radius:999px;border:0;background:rgba(247,236,226,.08);color:var(--on-deep);box-shadow:inset 0 0 0 1px var(--line-d);cursor:pointer;font-weight:600;font-size:.92rem;transition:background .25s;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.pill:hover{background:rgba(247,236,226,.16)}
+.pill svg{width:18px;height:18px}
+.pager{display:flex;align-items:center;gap:10px}
+.pager .pill{width:46px;padding:0;justify-content:center}
+.pager span{font-family:var(--f-kufi);font-size:1rem;min-width:62px;text-align:center;font-variant-numeric:tabular-nums}
+.imm-grid{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:0 var(--gutter) 48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center;min-height:calc(100svh - 80px)}
+.imm-stage{position:relative;display:grid;place-items:center;padding:34px 0}
+.imm-ros{position:absolute;left:50%;top:50%;width:min(150%,780px);aspect-ratio:1;translate:-50% -50%;color:var(--safran);opacity:0;pointer-events:none;animation:spin 120s linear infinite;transition:opacity 1s .3s}
+.imm.open .imm-ros{opacity:.16}
+.arch-wrap{position:relative;width:min(100%,430px,calc((100svh - 220px) * .8));aspect-ratio:4/5}
+.arch-photo{position:absolute;inset:0;overflow:hidden;clip-path:url(#arch-clip);-webkit-clip-path:url(#arch-clip);background:var(--deep-2)}
+.arch-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kb 16s ease-in-out infinite alternate}
+.arch-photo img.in{animation:wipe 1s var(--ease) both,kb 16s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.13) translate(1.5%,1.2%)}to{transform:scale(1.02) translate(-1%,-1%)}}
+@keyframes wipe{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+.arch-wrap .arch-line{inset:-18px -18px 0;width:calc(100% + 36px);height:calc(100% + 18px);opacity:0;transition:opacity .8s .45s}
+.imm.open .arch-wrap .arch-line{opacity:1}
+.tag{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;padding:8px 14px 8px 12px;border-radius:5px 12px 12px 5px;background:var(--slip);color:var(--ink);font-size:.84rem;font-weight:600;white-space:nowrap;box-shadow:0 14px 26px -12px rgba(0,0,0,.7);opacity:0;transition:opacity .6s}
+.tag::before{content:"";width:7px;height:7px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(36,19,15,.35)}
+.imm.open .tag{opacity:1}
+.tag.t1{left:-14%;top:40%;transform:rotate(-5deg);transition-delay:.7s;animation:bob1 6s ease-in-out infinite}
+.tag.t2{right:-12%;top:20%;transform:rotate(4deg);transition-delay:.85s;animation:bob2 7s ease-in-out infinite}
+.tag.t3{right:-6%;bottom:12%;transform:rotate(-3deg);transition-delay:1s;animation:bob1 6.5s ease-in-out infinite .6s}
+@keyframes bob1{50%{translate:0 -7px}}
+@keyframes bob2{50%{translate:0 6px}}
+.tag.pop{animation:tagpop .6s var(--ease-out)}
+@keyframes tagpop{from{opacity:0;scale:.8}}
+.imm-info>*{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .8s var(--ease-out)}
+.imm.open .imm-info>*{opacity:1;transform:none}
+.imm.open .imm-info>:nth-child(2){transition-delay:.06s}.imm.open .imm-info>:nth-child(3){transition-delay:.12s}.imm.open .imm-info>:nth-child(4){transition-delay:.18s}.imm.open .imm-info>:nth-child(5){transition-delay:.24s}.imm.open .imm-info>:nth-child(6){transition-delay:.3s}.imm.open .imm-info>:nth-child(7){transition-delay:.36s}
+.imm-info.swap{animation:swapIn .7s var(--ease-out)}
+@keyframes swapIn{0%{opacity:0;transform:translateY(12px)}}
+.imm-k{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--safran-2)}
+.imm-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin:14px 0 18px}
+.imm-title h2{font-size:clamp(2.6rem,5vw,4.4rem)}
+.imm-title .ar{font-size:clamp(1.8rem,3vw,2.6rem);color:var(--safran);line-height:1.2}
+.imm-desc{color:var(--on-deep-2);font-size:1.08rem;max-width:46ch}
+.spec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px;margin:26px 0 0}
+.spec div{padding:12px 0;border-top:1px solid var(--line-d)}
+.spec dt{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(247,236,226,.55)}
+.spec dd{margin:3px 0 0;font-weight:500}
+.pairs{margin-top:22px}
+.pairs>span{display:block;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(247,236,226,.55);margin-bottom:10px}
+.pairs div{display:flex;flex-wrap:wrap;gap:8px}
+.pairs button{display:inline-flex;align-items:center;gap:8px;padding:4px 13px 4px 4px;border-radius:999px;border:0;background:rgba(247,236,226,.08);box-shadow:inset 0 0 0 1px var(--line-d);cursor:pointer;font-size:.88rem;font-weight:500;transition:background .25s}
+.pairs button:hover{background:rgba(247,236,226,.16)}
+.pairs img{width:28px;height:28px;border-radius:50%;object-fit:cover}
+.imm-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.imm-cta .btn-safran[aria-pressed="true"]{background:var(--slip)}
+
+/* Apparitions */
+.js [data-rv]{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1.1s var(--ease-out)}
+.js [data-rv].in{opacity:1;transform:none}
+.js [data-rv="2"]{transition-delay:.12s}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){.steps{grid-template-columns:1fr}.steps li{display:flex;align-items:center;gap:14px;padding:14px 16px}.steps b{margin:0;flex:none}}
+@media (max-width:980px){
+  .hero-grid,.as-grid,.tr-grid,.ep-grid,.inf-grid{grid-template-columns:1fr}
+  .hero-copy{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .hero .cta,.trust{justify-content:center}
+  .hero .lead{margin-inline:auto}
+  .vit{max-width:680px;width:100%;margin-inline:auto}
+  .as-stage{order:-1}
+  .tr-photo{position:relative;top:0;max-width:440px;width:100%;margin-inline:auto}
+  .fm-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  .fcard .arch{aspect-ratio:4/3.2}
+  .fm-head{justify-content:center;text-align:center}
+  .imm-grid{grid-template-columns:1fr;min-height:0;gap:8px;padding-top:4px;padding-bottom:110px}
+  .imm-top{background:linear-gradient(180deg,rgba(43,14,11,.92) 55%,rgba(43,14,11,0))}
+  .arch-wrap{width:min(66vw,340px,calc((100svh - 260px) * .8))}
+  .imm-info{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .imm-title{justify-content:center}
+  .imm-desc{margin-inline:auto}
+  .spec{width:100%;text-align:left}
+  .pairs div,.imm-cta{justify-content:center}
+  .steps{grid-template-columns:repeat(3,minmax(0,1fr))}.steps li{display:block}.steps b{margin-bottom:10px}
+}
+@media (max-width:640px){
+  .hero .eyebrow .long{display:none}
+  .trays{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 14px}
+  .vit-case{padding:20px 14px 0}
+  .vit-front{margin:0 -14px;font-size:.6rem;letter-spacing:.18em}
+  .tray-add{width:34px;height:34px}
+  .steps{grid-template-columns:1fr}.steps li{display:flex;align-items:center;gap:14px}.steps b{margin:0}
+  .slip-grid{grid-template-columns:1fr}
+  .slip-stamp{display:none}
+  .rayons{grid-template-columns:1fr}
+  .ft-cols{grid-template-columns:1fr;gap:22px}
+  .tag{font-size:.76rem;padding:6px 11px 6px 9px}
+  .tag.t1{left:-9%}.tag.t2{right:-8%}.tag.t3{right:-4%}
+  .spec{grid-template-columns:1fr 1fr;gap:0 14px}
+  .imm-top .pill .t{display:none}
+  .imm-top #imm-back{width:46px;padding:0;justify-content:center}
+  .chip{font-size:.82rem}
+  .mini .mini-l{display:none}
+  .ep-photo .cap{left:22px;bottom:22px}
+}
+@media (max-width:400px){.hero h1{font-size:2.5rem}.trust{gap:10px 18px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .js [data-rv]{opacity:1;transform:none}
+}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="arch-clip" clipPathUnits="objectBoundingBox"><path d="M0,1 L0,.42 C0,.2 .22,.07 .5,0 C.78,.07 1,.2 1,.42 L1,1 Z"/></clipPath>
+    <symbol id="i-star" viewBox="0 0 28 28"><path d="M14 2 L17 11 L26 14 L17 17 L14 26 L11 17 L2 14 L11 11 Z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></g></symbol>
+  </defs>
+</svg>
+<script>document.documentElement.classList.add('js')</script>
+
+<!-- ============ BANDEAU ============ -->
+<div class="annonce" role="note">
+  <div class="wrap">
+    <a href="traiteur.html"><b>Plateaux traiteur</b><span class="long"> pour vos invités, commandez la veille</span> →</a>
+    <span class="sep" aria-hidden="true"></span>
+    <span class="addr">Rue Lesbroussart 18, Ixelles · jusqu'à 19h</span>
+  </div>
+</div>
+
+<!-- ============ EN-TÊTE ============ -->
+<header class="hd" id="top">
+  <div class="wrap hd-in">
+    <a class="logo" href="index.html" aria-label="L'Orient, accueil">
+      <span class="badge"><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+      <span class="logo-t"><b>L'Orient</b><em>Traiteur &amp; épicerie</em></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">La vitrine</a>
+      <a href="assiette.html">Mon assiette</a>
+      <a href="traiteur.html">Traiteur</a>
+      <a href="epicerie.html">L'épicerie</a>
+      <a href="nous-trouver.html">Nous trouver</a>
+    </nav>
+    <div class="hd-act">
+      <a class="btn btn-deep btn-sm" href="tel:+32475741005"><svg aria-hidden="true"><use href="#i-phone"/></svg>Commander</a>
+      <a class="round hd-call" href="tel:+32475741005" aria-label="Appeler le 0475 74 10 05"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+      <button class="round burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mm"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mm" id="mm" aria-hidden="true" inert>
+  <span class="pattern" aria-hidden="true"></span>
+  <svg class="mm-ros rosette" viewBox="-50 -50 100 100" aria-hidden="true"></svg>
+  <div class="mm-top">
+    <a class="logo" href="index.html"><span class="badge"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="logo-t"><b>L'Orient</b><em>Traiteur &amp; épicerie</em></span></a>
+    <button class="round mm-close" type="button" aria-label="Fermer le menu"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <nav aria-label="Menu mobile">
+    <a href="index.html" aria-current="page">La <em>vitrine</em></a>
+    <a href="assiette.html">Mon <em>assiette</em></a>
+    <a href="traiteur.html">Traiteur</a>
+    <a href="epicerie.html">L'épicerie</a>
+    <a href="nous-trouver.html">Nous <em>trouver</em></a>
+  </nav>
+</div>
+
+<main>
+<!-- ============ HERO : LA VITRINE ============ -->
+<section class="hero" id="vitrine" aria-labelledby="h-vitrine">
+  <span class="pattern" aria-hidden="true"></span>
+  <div class="wrap hero-grid">
+    <div class="hero-copy" data-rv>
+      <span class="eyebrow light"><svg aria-hidden="true"><use href="#i-star"/></svg><span>Traiteur &amp; épicerie <span class="long">orientale </span>· Ixelles</span></span>
+      <h1 id="h-vitrine">Choisissez <em>dans la vitrine</em></h1>
+      <p class="lead">Houmous, taboulé, falafels, feuilles de vigne : préparés chaque jour rue Lesbroussart. On vous sert au poids, en sandwich ou en assiette.</p>
+      <div class="cta">
+        <a class="btn btn-safran" href="assiette.html">Composer mon assiette <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="traiteur.html">Plateaux traiteur</a>
+      </div>
+      <ul class="trust">
+        <li><span class="stars" aria-hidden="true">★★★★★</span><span><b>4,7</b> sur Google · 80 avis</span></li>
+        <li><svg aria-hidden="true"><use href="#i-home"/></svg>Fait maison chaque jour</li>
+        <li><svg aria-hidden="true"><use href="#i-clock"/></svg>Ouvert jusqu'à 19h</li>
+      </ul>
+    </div>
+    <div class="vit" data-rv="2">
+      <svg class="vit-ros rosette" viewBox="-50 -50 100 100" aria-hidden="true"></svg>
+      <div class="vit-case">
+        <span class="vit-led" aria-hidden="true"></span>
+        <ul class="trays" id="trays" aria-label="La vitrine du jour">
+          <li class="tray">
+            <button class="tray-b" type="button" data-id="houmous" aria-label="Houmous : voir le plat de près"><span class="tray-in"><img src="img/t-houmous.jpg" alt="Houmous au paprika, pois chiches et huile d&#x27;olive" width="640" height="480" decoding="async"></span></button>
+            <span class="pick" aria-hidden="true"><b>Houmous</b><i lang="ar" dir="rtl">حمص</i></span>
+            <button class="tray-add" type="button" data-add="houmous" aria-pressed="false" aria-label="Ajouter Houmous à mon assiette"><svg class="i-plus" aria-hidden="true"><use href="#i-plus"/></svg><svg class="i-check" aria-hidden="true"><use href="#i-check"/></svg></button>
+          </li>
+          <li class="tray">
+            <button class="tray-b" type="button" data-id="taboule" aria-label="Taboulé : voir le plat de près"><span class="tray-in"><img src="img/t-taboule.jpg" alt="Taboulé au persil et à la tomate, servi avec du citron" width="640" height="480" decoding="async"></span></button>
+            <span class="pick" aria-hidden="true"><b>Taboulé</b><i lang="ar" dir="rtl">تبولة</i></span>
+            <button class="tray-add" type="button" data-add="taboule" aria-pressed="false" aria-label="Ajouter Taboulé à mon assiette"><svg class="i-plus" aria-hidden="true"><use href="#i-plus"/></svg><svg class="i-check" aria-hidden="true"><use href="#i-check"/></svg></button>
+          </li>
+          <li class="tray">
+            <button class="tray-b" type="button" data-id="falafel" aria-label="Falafels : voir le plat de près"><span class="tray-in"><img src="img/t-falafel.jpg" alt="Falafels dorés et navets marinés" width="640" height="480" decoding="async"></span></button>
+            <span class="pick" aria-hidden="true"><b>Falafels</b><i lang="ar" dir="rtl">فلافل</i></span>
+            <button class="tray-add" type="button" data-add="falafel" aria-pressed="false" aria-label="Ajouter Falafels à mon assiette"><svg class="i-plus" aria-hidden="true"><use href="#i-plus"/></svg><svg class="i-check" aria-hidden="true"><use href="#i-check"/></svg></button>
+          </li>
+          <li class="tray">
+            <button class="tray-b" type="button" data-id="navets" aria-label="Navets marinés : voir le plat de près"><span class="tray-in"><img src="img/t-navets.jpg" alt="Navets marinés roses" width="640" height="480" decoding="async"></span></button>
+            <span class="pick" aria-hidden="true"><b>Navets marinés</b><i lang="ar" dir="rtl">لفت مخلل</i></span>
+            <button class="tray-add" type="button" data-add="navets" aria-pressed="false" aria-label="Ajouter Navets marinés à mon assiette"><svg class="i-plus" aria-hidden="true"><use href="#i-plus"/></svg><svg class="i-check" aria-hidden="true"><use href="#i-check"/></svg></button>
+          </li>
+          <li class="tray">
+            <button class="tray-b" type="button" data-id="vigne" aria-label="Feuilles de vigne : voir le plat de près"><span class="tray-in"><img src="img/t-vigne.jpg" alt="Feuilles de vigne farcies, tomate et salade" width="640" height="480" decoding="async" loading="lazy"></span></button>
+            <span class="pick" aria-hidden="true"><b>Feuilles de vigne</b><i lang="ar" dir="rtl">ورق عنب</i></span>
+            <button class="tray-add" type="button" data-add="vigne" aria-pressed="false" aria-label="Ajouter Feuilles de vigne à mon assiette"><svg class="i-plus" aria-hidden="true"><use href="#i-plus"/></svg><svg class="i-check" aria-hidden="true"><use href="#i-check"/></svg></button>
+          </li>
+          <li class="tray">
+            <button class="tray-b" type="button" data-id="riz" aria-label="Riz : voir le plat de près"><span class="tray-in"><img src="img/t-riz.jpg" alt="Riz blanc moelleux" width="640" height="480" decoding="async" loading="lazy"></span></button>
+            <span class="pick" aria-hidden="true"><b>Riz</b><i lang="ar" dir="rtl">رز</i></span>
+            <button class="tray-add" type="button" data-add="riz" aria-pressed="false" aria-label="Ajouter Riz à mon assiette"><svg class="i-plus" aria-hidden="true"><use href="#i-plus"/></svg><svg class="i-check" aria-hidden="true"><use href="#i-check"/></svg></button>
+          </li>
+          <li class="tray">
+            <button class="tray-b" type="button" data-id="moutabal" aria-label="Moutabal : voir le plat de près"><span class="tray-in"><img src="img/t-moutabal.jpg" alt="Moutabal à l&#x27;huile d&#x27;olive dans une assiette de mezzés" width="640" height="480" decoding="async" loading="lazy"></span></button>
+            <span class="pick" aria-hidden="true"><b>Moutabal</b><i lang="ar" dir="rtl">متبل</i></span>
+            <button class="tray-add" type="button" data-add="moutabal" aria-pressed="false" aria-label="Ajouter Moutabal à mon assiette"><svg class="i-plus" aria-hidden="true"><use href="#i-plus"/></svg><svg class="i-check" aria-hidden="true"><use href="#i-check"/></svg></button>
+          </li>
+          <li class="tray">
+            <button class="tray-b" type="button" data-id="shawarma" aria-label="Shawarma : voir le plat de près"><span class="tray-in"><img src="img/t-shawarma.jpg" alt="Shawarma grillé à la broche" width="640" height="480" decoding="async" loading="lazy"></span></button>
+            <span class="pick" aria-hidden="true"><b>Shawarma</b><i lang="ar" dir="rtl">شاورما</i></span>
+            <button class="tray-add" type="button" data-add="shawarma" aria-pressed="false" aria-label="Ajouter Shawarma à mon assiette"><svg class="i-plus" aria-hidden="true"><use href="#i-plus"/></svg><svg class="i-check" aria-hidden="true"><use href="#i-check"/></svg></button>
+          </li>
+        </ul>
+        <div class="vit-front" aria-hidden="true"><span>L'Orient · la vitrine du jour</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <span class="vit-sweep" aria-hidden="true"></span>
+      </div>
+      <p class="vit-hint">Touchez un bac pour le voir de près · <b aria-hidden="true">+</b> pour l'ajouter à votre assiette</p>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="marq-track"><span>Houmous<i lang="ar" dir="rtl">حمص</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Taboulé<i lang="ar" dir="rtl">تبولة</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Falafels<i lang="ar" dir="rtl">فلافل</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Navets marinés<i lang="ar" dir="rtl">لفت مخلل</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Feuilles de vigne<i lang="ar" dir="rtl">ورق عنب</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Riz<i lang="ar" dir="rtl">رز</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Moutabal<i lang="ar" dir="rtl">متبل</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Shawarma<i lang="ar" dir="rtl">شاورما</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Houmous<i lang="ar" dir="rtl">حمص</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Taboulé<i lang="ar" dir="rtl">تبولة</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Falafels<i lang="ar" dir="rtl">فلافل</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Navets marinés<i lang="ar" dir="rtl">لفت مخلل</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Feuilles de vigne<i lang="ar" dir="rtl">ورق عنب</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Riz<i lang="ar" dir="rtl">رز</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Moutabal<i lang="ar" dir="rtl">متبل</i><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Shawarma<i lang="ar" dir="rtl">شاورما</i><svg aria-hidden="true"><use href="#i-star"/></svg></span></div></div>
+
+<!-- ============ TROIS FAÇONS ============ -->
+<section class="section fm" aria-labelledby="h-fm">
+  <div class="wrap">
+    <div class="fm-head" data-rv>
+      <div><span class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg>Au comptoir</span><h2 class="h2" id="h-fm">Trois façons <em>de se régaler</em></h2></div>
+      <a class="link" href="tel:+32475741005">Commander au 0475 74 10 05 <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="fm-grid">
+      <a class="fcard" href="index.html" data-rv>
+        <span class="num" aria-hidden="true">1</span>
+        <div class="arch"><img src="img/f-sandwich.jpg" alt="Sandwichs dans du pain libanais, garnis d'herbes et de légumes" width="560" height="700" loading="lazy" decoding="async"></div>
+        <div class="fcard-b"><span class="k">Le midi</span><h3>Le sandwich</h3><p>Garni avec ce que vous voulez dans la vitrine, prêt en deux minutes.</p><span class="link go">Choisir la garniture <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="fcard" href="assiette.html" data-rv="2">
+        <span class="num" aria-hidden="true">2</span>
+        <div class="arch"><img src="img/f-assiette.jpg" alt="Assiette de mezzés : falafels, houmous, taboulé, feuilles de vigne et salade" width="1120" height="1020" loading="lazy" decoding="async"></div>
+        <div class="fcard-b"><span class="k">Sur place ou à emporter</span><h3>L'assiette</h3><p>Plusieurs mezzés au choix, à emporter ou en livraison.</p><span class="link go">Composer la mienne <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="fcard" href="traiteur.html" data-rv>
+        <span class="num" aria-hidden="true">3</span>
+        <div class="arch"><img src="img/f-plateau.jpg" alt="Houmous, navets marinés, cornichons et épices prêts à partager" width="720" height="900" loading="lazy" decoding="async"></div>
+        <div class="fcard-b"><span class="k">Pour vos invités</span><h3>Le plateau</h3><p>Pour une fête ou une réunion, sur commande la veille.</p><span class="link go">Demander un plateau <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ PIED DE PAGE ============ -->
+<div class="frise" aria-hidden="true"></div>
+<footer class="ft">
+  <span class="pattern" aria-hidden="true"></span>
+  <div class="wrap ft-in">
+    <span class="badge"><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+    <div class="ft-brand"><b>L'Orient</b><em>Traiteur &amp; épicerie orientale</em></div>
+    <p class="ft-tag">Mezzés, sandwichs, assiettes et plateaux préparés chaque jour, rue Lesbroussart à Ixelles.</p>
+    <ul class="ft-nav"><li><a href="index.html">La vitrine</a></li><li><a href="assiette.html">Mon assiette</a></li><li><a href="traiteur.html">Traiteur</a></li><li><a href="epicerie.html">L'épicerie</a></li><li><a href="nous-trouver.html">Nous trouver</a></li></ul>
+    <div class="ft-cols">
+      <div><h4>Adresse</h4><p>Rue Lesbroussart 18<br>1050 Ixelles</p></div>
+      <div><h4>Horaires</h4><p>Jusqu'à 19h<br>Sur place · à emporter · livraison</p></div>
+      <div><h4>Commander</h4><p><a href="tel:+32475741005">0475 74 10 05</a><br><a href="traiteur.html">Plateaux traiteur</a></p></div>
+    </div>
+    <div class="ft-icons">
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=L%27Orient%20Traiteur%20Rue%20Lesbroussart%2018%201050%20Ixelles" target="_blank" rel="noopener" aria-label="L'Orient sur Google Maps"><svg aria-hidden="true"><use href="#i-pin"/></svg></a>
+      <a href="tel:+32475741005" aria-label="Appeler L'Orient"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+    </div>
+    <div class="ft-small"><span>© <span id="year">2026</span> L'Orient, traiteur et épicerie orientale</span><button type="button" class="ft-top" data-top>Retour en haut ↑</button></div>
+  </div>
+</footer>
+
+<button type="button" class="to-top" id="to-top" data-top aria-label="Retour en haut de la page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<button type="button" class="mini" id="mini" aria-label="Voir mon assiette" tabindex="-1"><span class="mini-plate"><span class="plate-food" id="mini-food"></span></span><span class="mini-l">Mon assiette</span><span class="mini-n" id="mini-n">0</span></button>
+
+<!-- ============ IMMERSION ============ -->
+<div class="imm" id="imm" hidden role="dialog" aria-modal="true" aria-labelledby="imm-name">
+  <div class="imm-bg" aria-hidden="true"><span class="pattern"></span></div>
+  <div class="imm-top">
+    <button class="pill" type="button" id="imm-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="t">Revenir à la vitrine</span></button>
+    <div class="pager"><button class="pill" type="button" id="imm-prev" aria-label="Plat précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><span id="imm-count">01 / 08</span><button class="pill" type="button" id="imm-next" aria-label="Plat suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
+  </div>
+  <div class="imm-grid">
+    <div class="imm-stage" id="imm-stage">
+      <svg class="imm-ros rosette" viewBox="-50 -50 100 100" aria-hidden="true"></svg>
+      <div class="arch-wrap" id="arch-wrap">
+        <svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M0,125 L0,52.5 C0,25 22,8.75 50,0 C78,8.75 100,25 100,52.5 L100,125"/></svg>
+        <div class="arch-photo" id="arch-photo"></div>
+        <span class="tag t1" aria-hidden="true"></span>
+        <span class="tag t2" aria-hidden="true"></span>
+        <span class="tag t3" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="imm-info" id="imm-info">
+      <span class="imm-k" id="imm-k">La vitrine</span>
+      <div class="imm-title"><h2 id="imm-name">Houmous</h2><span class="ar" lang="ar" dir="rtl" id="imm-ar"></span></div>
+      <p class="imm-desc" id="imm-desc"></p>
+      <dl class="spec">
+        <div><dt>Goût</dt><dd id="imm-gout"></dd></div>
+        <div><dt>Végétarien</dt><dd id="imm-vege"></dd></div>
+        <div><dt>Servi</dt><dd>Au poids, en sandwich ou en assiette</dd></div>
+        <div><dt>Où le manger</dt><dd>Sur place · à emporter</dd></div>
+      </dl>
+      <div class="pairs"><span>Se marie avec</span><div id="imm-pairs"></div></div>
+      <div class="imm-cta"><button class="btn btn-safran" type="button" id="imm-add" aria-pressed="false"><svg aria-hidden="true"><use href="#i-plus"/></svg><span>Ajouter à mon assiette</span></button><a class="btn btn-ghost" href="tel:+32475741005"><svg aria-hidden="true"><use href="#i-phone"/></svg>Commander</a></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const pad = n => String(n).padStart(2, '0');
+  const D = [{"id": "houmous", "name": "Houmous", "ar": "حمص", "k": "Le classique", "alt": "Houmous au paprika, pois chiches et huile d'olive", "desc": "Pois chiches, tahini, citron et un filet d'huile d'olive. Crémeux, à tremper avec le pain.", "gout": "Crémeux, citronné", "vege": "Oui", "notes": ["Crémeux", "Citronné", "Huile d'olive"], "pairs": ["falafel", "taboule", "vigne"]}, {"id": "taboule", "name": "Taboulé", "ar": "تبولة", "k": "Frais", "alt": "Taboulé au persil et à la tomate, servi avec du citron", "desc": "Beaucoup de persil, de la menthe, de la tomate et un peu de boulgour, avec beaucoup de citron.", "gout": "Frais, herbacé, acidulé", "vege": "Oui", "notes": ["Persil", "Menthe", "Citron"], "pairs": ["falafel", "shawarma", "houmous"]}, {"id": "falafel", "name": "Falafels", "ar": "فلافل", "k": "Frits minute", "alt": "Falafels dorés et navets marinés", "desc": "Pois chiches, herbes et épices, frits à la commande. Croustillants dehors, tendres dedans.", "gout": "Croustillant, épicé", "vege": "Oui", "notes": ["Croustillant", "Sésame", "Herbes"], "pairs": ["houmous", "navets", "taboule"]}, {"id": "navets", "name": "Navets marinés", "ar": "لفت مخلل", "k": "Le croquant", "alt": "Navets marinés roses", "desc": "Des navets marinés, d'un rose vif. Croquants et acidulés, pour réveiller l'assiette et le sandwich.", "gout": "Croquant, acidulé", "vege": "Oui", "notes": ["Croquant", "Acidulé", "Rose vif"], "pairs": ["falafel", "shawarma", "houmous"]}, {"id": "vigne", "name": "Feuilles de vigne", "ar": "ورق عنب", "k": "Roulées main", "alt": "Feuilles de vigne farcies, tomate et salade", "desc": "Roulées à la main, farcies au riz et aux herbes, servies avec du citron.", "gout": "Fondant, citronné", "vege": "Oui", "notes": ["Roulées main", "Riz", "Herbes"], "pairs": ["taboule", "houmous", "moutabal"]}, {"id": "riz", "name": "Riz", "ar": "رز", "k": "Accompagnement", "alt": "Riz blanc moelleux", "desc": "Le riz de tous les jours, moelleux, pour accompagner le shawarma et les grillades.", "gout": "Doux, moelleux", "vege": "Oui", "notes": ["Moelleux", "Doux", "Du jour"], "pairs": ["shawarma", "moutabal", "taboule"]}, {"id": "moutabal", "name": "Moutabal", "ar": "متبل", "k": "Fumé", "alt": "Moutabal à l'huile d'olive dans une assiette de mezzés", "desc": "Aubergine grillée, tahini et citron. Un goût fumé, très doux, à tremper avec le pain.", "gout": "Fumé, onctueux", "vege": "Oui", "notes": ["Fumé", "Onctueux", "Aubergine"], "pairs": ["houmous", "shawarma", "riz"]}, {"id": "shawarma", "name": "Shawarma", "ar": "شاورما", "k": "Grillé à la broche", "alt": "Shawarma grillé à la broche", "desc": "Mariné aux épices, grillé à la broche et coupé en fines lamelles.", "gout": "Épicé, grillé", "vege": "Non", "notes": ["À la broche", "Épices", "Fondant"], "pairs": ["riz", "taboule", "navets"]}];
+  const idx = Object.fromEntries(D.map((d, i) => [d.id, i]));
+  const TRAY = id => 'img/t-' + id + '.jpg', ARCH = id => 'img/a-' + id + '.jpg';
+  const MAX = 4;
+
+  /* ---------- Rosaces (zellige, étoiles à huit branches) ---------- */
+  function star(R, r, n, rot) {
+    let d = '';
+    for (let k = 0; k < 2 * n; k++) { const a = rot + k * Math.PI / n, q = k % 2 ? r : R; d += (k ? 'L' : 'M') + (Math.sin(a) * q).toFixed(2) + ',' + (-Math.cos(a) * q).toFixed(2); }
+    return d + 'Z';
+  }
+  const ROS = (() => {
+    let p = '<g fill="none" stroke="currentColor" stroke-width=".32">';
+    p += '<circle r="49"/><circle r="47.4"/>';
+    p += `<path d="${star(46, 36, 8, 0)}"/><path d="${star(46, 36, 8, Math.PI / 8)}"/>`;
+    p += `<path d="${star(33, 25, 8, Math.PI / 16)}"/><circle r="22"/>`;
+    for (let k = 0; k < 16; k++) { const a = k * Math.PI / 8; p += `<path d="M${(Math.sin(a) * 22).toFixed(2)},${(-Math.cos(a) * 22).toFixed(2)}L${(Math.sin(a) * 33).toFixed(2)},${(-Math.cos(a) * 33).toFixed(2)}"/>`; }
+    p += `<path d="${star(19, 9, 8, 0)}"/><path d="${star(19, 9, 8, Math.PI / 8)}"/><circle r="5"/>`;
+    return p + '</g>';
+  })();
+  $$('svg.rosette').forEach(s => s.innerHTML = ROS);
+
+  /* ---------- L'assiette : état ---------- */
+  let plate;
+  try { plate = JSON.parse(localStorage.getItem('orient-assiette')); } catch (e) { plate = null; }
+  let touched = Array.isArray(plate);
+  if (!Array.isArray(plate)) plate = ['houmous', 'taboule', 'falafel'];
+  plate = plate.filter(id => id in idx).slice(0, MAX);
+  const save = () => { touched = true; try { localStorage.setItem('orient-assiette', JSON.stringify(plate)); } catch (e) {} };
+
+  /* Secteurs : polygones à nombre de points constant, pour que clip-path s'anime */
+  const N = 28;
+  function wedge(a0, a1) {
+    const pts = ['50% 50%'];
+    for (let k = 0; k <= N; k++) { const a = (a0 + (a1 - a0) * k / N) * 2 * Math.PI; pts.push((50 + 54 * Math.sin(a)).toFixed(2) + '% ' + (50 - 54 * Math.cos(a)).toFixed(2) + '%'); }
+    return 'polygon(' + pts.join(',') + ')';
+  }
+  function plateRenderer(food) {
+    const els = new Map();
+    return function (list) {
+      const n = list.length, gap = n > 1 ? .006 : 0, off = -.07;
+      list.forEach((id, k) => {
+        const a0 = off + k / n + gap, a1 = off + (k + 1) / n - gap;
+        let el = els.get(id);
+        if (!el) {
+          el = document.createElement('div'); el.className = 'sec';
+          el.innerHTML = `<img src="${TRAY(id)}" alt="" decoding="async">`;
+          el.style.clipPath = wedge(a1, a1); food.append(el); els.set(id, el);
+          void el.offsetWidth;
+        }
+        el.style.clipPath = wedge(a0, a1); el.dataset.m = (a0 + a1) / 2;
+      });
+      els.forEach((el, id) => {
+        if (list.includes(id)) return;
+        const m = +el.dataset.m; el.style.clipPath = wedge(m, m); els.delete(id);
+        setTimeout(() => el.remove(), 900);
+      });
+    };
+  }
+  const plateEl = $('#plate'), drawPlate = plateEl ? plateRenderer($('#plate-food')) : () => {}, drawMini = plateRenderer($('#mini-food'));
+  const listEl = $('#as-list'), live = $('#as-live') || {}, mini = $('#mini');
+
+  function renderAll() {
+    drawPlate(plate); drawMini(plate);
+    if (plateEl) plateEl.classList.toggle('empty', !plate.length);
+    if (plateEl) plateEl.setAttribute('aria-label', plate.length ? 'Votre assiette : ' + plate.map(id => D[idx[id]].name).join(', ') : 'Votre assiette est vide');
+    if (listEl) listEl.innerHTML = plate.map(id => { const d = D[idx[id]]; return `<li><img src="${TRAY(id)}" alt="" width="50" height="50"><span class="nm"><b>${d.name}</b><i lang="ar" dir="rtl">${d.ar}</i></span><button type="button" data-rm="${id}" aria-label="Retirer ${d.name}"><svg aria-hidden="true"><use href="#i-x"/></svg></button></li>`; }).join('');
+    if ($('#as-empty')) $('#as-empty').hidden = plate.length > 0;
+    if ($('#as-count')) $('#as-count').textContent = plate.length + ' / ' + MAX;
+    $('#mini-n').textContent = plate.length;
+    $$('[data-add]').forEach(b => {
+      const on = plate.includes(b.dataset.add); b.setAttribute('aria-pressed', String(on));
+      b.classList.toggle('full', !on && plate.length >= MAX);
+    });
+    syncImmAdd(); updateMini();
+  }
+  function toggle(id, from) {
+    const d = D[idx[id]];
+    if (plate.includes(id)) { plate = plate.filter(x => x !== id); live.textContent = d.name + ' retiré de votre assiette.'; }
+    else if (plate.length >= MAX) {
+      live.textContent = 'Quatre mezzés maximum : retirez-en un pour ajouter ' + d.name + '.';
+      const t = $('#as-count'); if (t) { t.classList.remove('shake'); void t.offsetWidth; t.classList.add('shake'); }
+      if (from) { from.classList.remove('shake'); void from.offsetWidth; from.classList.add('shake'); }
+      return;
+    } else { plate = plate.concat(id); live.textContent = d.name + ' ajouté à votre assiette.'; fly(from, id); }
+    save(); renderAll();
+  }
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-add]'); if (a) { e.preventDefault(); toggle(a.dataset.add, a.closest('.tray') ? $('img', a.closest('.tray')) : ($('img', a) || a)); return; }
+    const r = e.target.closest('[data-rm]'); if (r) toggle(r.dataset.rm);
+  });
+  if ($('#as-clear')) $('#as-clear').addEventListener('click', () => { plate = []; save(); renderAll(); live.textContent = 'Assiette vidée.'; });
+
+  /* La portion vole jusqu'à l'assiette */
+  let plateSeen = false, asSeen = false;
+  function fly(from, id) {
+    if (reduce || !from || !from.getBoundingClientRect) return;
+    const r = from.getBoundingClientRect(); if (!r.width) return;
+    let tx, ty, target;
+    if (plateSeen && !isOpen) { const p = plateEl.getBoundingClientRect(); tx = p.left + p.width / 2; ty = p.top + p.height / 2; target = plateEl; }
+    else { tx = 18 + 6 + 20; ty = innerHeight - 18 - 6 - 20; target = mini; }
+    const sx = r.left + r.width / 2, sy = r.top + r.height / 2, s0 = Math.min(r.width, r.height) / 72;
+    const el = document.createElement('div'); el.className = 'fly'; el.style.backgroundImage = `url(${TRAY(id)})`; document.body.append(el);
+    const mx = (sx + tx) / 2, my = Math.min(sy, ty) - Math.max(80, Math.abs(tx - sx) * .25);
+    el.animate([
+      { transform: `translate(${sx - 36}px,${sy - 36}px) scale(${s0})`, opacity: 1 },
+      { transform: `translate(${mx - 36}px,${my - 36}px) scale(.85)`, opacity: 1, offset: .5 },
+      { transform: `translate(${tx - 36}px,${ty - 36}px) scale(.32)`, opacity: .3 }
+    ], { duration: 900, easing: 'cubic-bezier(.45,0,.25,1)' }).onfinish = () => {
+      el.remove(); target.classList.remove('bump'); void target.offsetWidth; target.classList.add('bump');
+    };
+  }
+  if ('IntersectionObserver' in window) {
+    if (plateEl) new IntersectionObserver(es => es.forEach(en => { plateSeen = en.isIntersecting; updateMini(); }), { threshold: .35 }).observe(plateEl);
+    if ($('#assiette')) new IntersectionObserver(es => es.forEach(en => { asSeen = en.isIntersecting; updateMini(); }), { threshold: .15 }).observe($('#assiette'));
+  }
+  function updateMini() {
+    const show = touched && plate.length > 0 && (isOpen || !asSeen) && !document.body.classList.contains('menu-open');
+    mini.classList.toggle('show', show); mini.tabIndex = show ? 0 : -1; mini.setAttribute('aria-hidden', String(!show));
+  }
+  mini.addEventListener('click', () => {
+    const go = () => { const s = $('#assiette'); if (s) s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); else location.href = 'assiette.html'; };
+    if (isOpen) { opener = null; close(); setTimeout(go, 450); } else go();
+  });
+
+  /* ---------- La vitrine : un bac = un plat ---------- */
+  $$('.tray-b').forEach(b => b.addEventListener('click', () => open(idx[b.dataset.id], $('img', b))));
+
+  /* =====================================================================
+     Immersion : sous l'arche
+     ===================================================================== */
+  const imm = $('#imm'), wrap = $('#arch-wrap'), photo = $('#arch-photo'), info = $('#imm-info'), stage = $('#imm-stage');
+  const tags = $$('.tag', wrap);
+  let cur = 0, isOpen = false, opener = null;
+  function setPhoto(i, animate) {
+    const img = new Image(); img.alt = D[i].alt; img.src = ARCH(D[i].id); img.decoding = 'async';
+    const old = $$('img', photo);
+    if (animate) { img.className = 'in'; photo.append(img); setTimeout(() => old.forEach(o => o.remove()), 1050); }
+    else { old.forEach(o => o.remove()); photo.append(img); }
+  }
+  function fill(i, animate) {
+    const d = D[i]; cur = i;
+    setPhoto(i, animate);
+    $('#imm-k').textContent = 'La vitrine · ' + d.k;
+    $('#imm-name').textContent = d.name; $('#imm-ar').textContent = d.ar;
+    $('#imm-desc').textContent = d.desc; $('#imm-gout').textContent = d.gout; $('#imm-vege').textContent = d.vege;
+    $('#imm-count').textContent = pad(i + 1) + ' / ' + pad(D.length);
+    $('#imm-pairs').innerHTML = d.pairs.map(p => { const q = D[idx[p]]; return `<button type="button" data-go="${p}"><img src="${TRAY(p)}" alt="" width="28" height="28">${q.name}</button>`; }).join('');
+    tags.forEach((t, k) => { t.textContent = d.notes[k] || ''; if (animate) { t.classList.remove('pop'); void t.offsetWidth; t.classList.add('pop'); } });
+    syncImmAdd();
+  }
+  function syncImmAdd() {
+    const b = $('#imm-add'); if (!D[cur]) return;
+    const on = plate.includes(D[cur].id);
+    b.setAttribute('aria-pressed', String(on));
+    $('use', b).setAttribute('href', on ? '#i-check' : '#i-plus');
+    $('span', b).textContent = on ? 'Dans votre assiette' : (plate.length >= MAX ? 'Assiette pleine (4 max)' : 'Ajouter à mon assiette');
+  }
+  $('#imm-add').addEventListener('click', e => toggle(D[cur].id, plate.includes(D[cur].id) ? null : photo));
+  $('#imm-pairs').addEventListener('click', e => { const b = e.target.closest('[data-go]'); if (b) go(idx[b.dataset.go] - cur); });
+
+  function flipFrom(el, dur, back) {
+    const a = el.getBoundingClientRect(), b = wrap.getBoundingClientRect();
+    if (!a.width || !b.width) return null;
+    const s = a.width / b.width, dx = (a.left + a.width / 2) - (b.left + b.width / 2), dy = (a.top + a.height / 2) - (b.top + b.height / 2);
+    const from = { transform: `translate(${dx}px,${dy}px) scale(${s})`, opacity: back ? 0 : .6 }, to = { transform: 'none', opacity: 1 };
+    return wrap.animate(back ? [to, from] : [from, to], { duration: dur, easing: 'cubic-bezier(.7,0,.2,1)', fill: back ? 'forwards' : 'none' });
+  }
+  function open(i, fromEl) {
+    opener = fromEl || null;
+    imm.hidden = false; imm.scrollTop = 0; document.body.classList.add('locked');
+    fill(i, false);
+    requestAnimationFrame(() => {
+      imm.classList.add('open'); isOpen = true; updateMini();
+      if (!reduce && fromEl) flipFrom(fromEl, 1000, false);
+      $('#imm-back').focus({ preventScroll: true });
+    });
+  }
+  function close() {
+    if (!isOpen) return;
+    const done = () => {
+      imm.hidden = true; imm.classList.remove('open'); document.body.classList.remove('locked'); isOpen = false;
+      wrap.getAnimations().forEach(a => a.cancel()); updateMini();
+      const btn = opener && opener.closest && opener.closest('button'); if (btn) btn.focus({ preventScroll: true });
+    };
+    if (reduce) return done();
+    imm.classList.remove('open');
+    const t = opener && opener.getBoundingClientRect();
+    if (t && t.width && t.bottom > 0 && t.top < innerHeight) { const an = flipFrom(opener, 700, true); if (an) { an.onfinish = done; return; } }
+    setTimeout(done, 450);
+  }
+  function go(dir) {
+    if (!dir) return;
+    const n = (cur + dir + D.length) % D.length; opener = $('img', $$('.tray-b')[n]);
+    if (reduce) { fill(n, false); return; }
+    fill(n, true); info.classList.remove('swap'); void info.offsetWidth; info.classList.add('swap');
+  }
+  $('#imm-back').addEventListener('click', close);
+  $('#imm-prev').addEventListener('click', () => go(-1));
+  $('#imm-next').addEventListener('click', () => go(1));
+  document.addEventListener('keydown', e => {
+    if (!isOpen) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+    if (e.key === 'Tab') { const f = $$('button, a[href]', imm).filter(x => x.offsetParent !== null); if (!f.length) return; const first = f[0], last = f[f.length - 1]; if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); } }
+  });
+  let sx = 0, sy = 0;
+  stage.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  stage.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? 1 : -1); });
+
+  /* ---------- Bon de commande (Web3Forms) ---------- */
+  const WEB3FORMS_KEY = 'VOTRE_CLE_WEB3FORMS';
+  const form = $('#slip'), msg = $('#slip-msg');
+  const dateIn = $('#f-date'); try { const t = new Date(); t.setDate(t.getDate() + 1); dateIn.min = t.toISOString().slice(0, 10); } catch (e) {}
+  if (form) form.addEventListener('submit', async e => {
+    e.preventDefault(); msg.className = 'form-msg';
+    const bad = $$('[required]', form).find(f => !f.value.trim());
+    if (bad) { msg.classList.add('err'); msg.textContent = 'Il manque une information : ' + $('label[for="' + bad.id + '"]', form).textContent.toLowerCase() + '.'; bad.focus(); return; }
+    const key = $('[name="access_key"]', form); if (key.value === 'VOTRE_CLE_WEB3FORMS') key.value = WEB3FORMS_KEY;
+    if (key.value === 'VOTRE_CLE_WEB3FORMS') { msg.classList.add('err'); msg.textContent = 'Le formulaire sera bientôt actif. En attendant, appelez le 0475 74 10 05.'; return; }
+    const btn = $('[type="submit"]', form); btn.disabled = true; msg.textContent = 'Envoi en cours…';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+      const j = await res.json();
+      if (j.success) { form.reset(); msg.classList.add('ok'); msg.textContent = 'Merci ! Votre demande est envoyée, nous vous rappelons pour confirmer.'; }
+      else throw new Error(j.message);
+    } catch (err) { msg.classList.add('err'); msg.textContent = "L'envoi n'a pas fonctionné. Appelez-nous au 0475 74 10 05."; }
+    btn.disabled = false;
+  });
+
+  /* ---------- En-tête, menu, apparitions, retour en haut ---------- */
+  const hd = $('.hd'); const onS = () => hd.classList.toggle('scrolled', scrollY > 8); onS(); addEventListener('scroll', onS, { passive: true });
+  const mm = $('#mm'), burger = $('#burger');
+  function setMenu(o) {
+    mm.classList.toggle('open', o); mm.setAttribute('aria-hidden', String(!o)); mm.inert = !o;
+    burger.setAttribute('aria-expanded', String(o)); document.body.classList.toggle('locked', o); document.body.classList.toggle('menu-open', o); updateMini();
+    if (o) setTimeout(() => $('.mm-close').focus({ preventScroll: true }), 60);
+  }
+  burger.addEventListener('click', () => setMenu(true));
+  $('.mm-close').addEventListener('click', () => { setMenu(false); burger.focus(); });
+  $$('#mm a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && mm.classList.contains('open')) { setMenu(false); burger.focus(); } });
+  addEventListener('resize', () => { if (innerWidth > 980 && mm.classList.contains('open')) setMenu(false); });
+  const links = $$('.nav a'), secs = links.map(a => $(a.getAttribute('href'))).filter(Boolean);
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id)); }), { rootMargin: '-40% 0px -55% 0px' });
+    secs.forEach(s => io.observe(s));
+    const rv = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); rv.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    $$('[data-rv]').forEach(el => rv.observe(el));
+  } else $$('[data-rv]').forEach(el => el.classList.add('in'));
+  const tt = $('#to-top'); const t2 = () => tt.classList.toggle('show', scrollY > 700); t2(); addEventListener('scroll', t2, { passive: true });
+  $$('[data-top]').forEach(b => b.addEventListener('click', () => scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })));
+  $('#year').textContent = new Date().getFullYear();
+
+  renderAll();
+})();
+
+</script>
+
+</body>
+</html>
